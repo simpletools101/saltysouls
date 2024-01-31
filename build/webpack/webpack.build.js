@@ -3,6 +3,7 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
+const DotenvWebpackPlugin = require('dotenv-webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
@@ -59,6 +60,9 @@ const buildConfiguration = {
         }),
         new MiniCssExtractPlugin({
             filename : "evm/[contenthash].css"
+        }),
+        new DotenvWebpackPlugin({
+          prefix:'process.env'  
         }),
         new HtmlWebpackPlugin({
             title: "SaltySouls",
