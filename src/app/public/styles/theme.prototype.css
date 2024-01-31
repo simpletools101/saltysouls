@@ -1,0 +1,24 @@
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Simple Tools. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+
+html[theme="light"]{
+    --turquoise: #4bcbb5ff;
+    --banner-backdrop-color:#000000b3;
+    --marginal-container-bg:#f8f8f8;
+    --marginal-container-bg-plane:#fffcfc;
+    --marginal-container-content:#fff;
+    --marginal-container-content-plane:#fffcfc;
+    --marginal-container-shadow-bg:#01010126;
+}
+
+ html[theme="dark"] {
+
+    --turquoise:#60bdad;
+    --banner-backdrop-color:#000000b3;
+    --marginal-container-bg:#2f2f2f;
+    --marginal-container-content:#141313;
+    --marginal-container-shadow-bg:#010101b0;
+}
