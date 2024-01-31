@@ -3,7 +3,6 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-const DotenvWebpackPlugin = require('dotenv-webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
@@ -12,7 +11,7 @@ const CopyPlugin = require('copy-webpack-plugin')
 const webpack = require('webpack')
 const { TsconfigPathsPlugin } = require("tsconfig-paths-webpack-plugin")
 const { resolve } = require("path")
-
+require('dotenv').config()
 
 /**
  * Build Configuration
@@ -61,9 +60,7 @@ const buildConfiguration = {
         new MiniCssExtractPlugin({
             filename : "evm/[contenthash].css"
         }),
-        new DotenvWebpackPlugin({
-          prefix:'process.env'  
-        }),
+        new webpack.EnvironmentPlugin(['SALTY_SOULS_CMS']),
         new HtmlWebpackPlugin({
             title: "SaltySouls",
             cache: true,
