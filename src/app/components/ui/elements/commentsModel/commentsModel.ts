@@ -199,6 +199,14 @@ export class CommentsModel extends LitElement {
                 margin-bottom: 12px;
             }
         }
+        @media(max-width:402px){
+            .entry-containers .entry-item input {
+                width: 80%;
+            }
+            .entry-containers .section-2 textarea  {
+                width:80%;
+            }
+        }
     `;
 
     /**
