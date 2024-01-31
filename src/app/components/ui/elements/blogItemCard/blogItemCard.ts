@@ -65,7 +65,7 @@ export class BlogItemCard extends LitElement {
                 display: block;
                 transition: all 0.3s;
                 width: 100%;
-                height: 450px;
+                height: auto;
                 
                 font-display: auto;
             }

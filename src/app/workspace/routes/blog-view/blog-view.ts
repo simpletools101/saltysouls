@@ -203,7 +203,7 @@ export class BlogView extends LitElement {
                 display: block;
                 transition: all 0.3s;
                 width: 100%;
-                height: 450px;
+                height: auto;
 
                 margin-top: 30px;
             }
