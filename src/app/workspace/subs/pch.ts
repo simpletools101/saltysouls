@@ -7,7 +7,7 @@
  * Import css
  */
 
-// import "../../public/styles/font.css";
+import "../../public/styles/font.css";
 import "../../public/styles/global.css";
 import "../../public/styles/theme.css";
 

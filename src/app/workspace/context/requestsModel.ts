@@ -28,6 +28,13 @@ export const IRequestsContext = createServiceContext<RequestsModel>(
     Symbol("requestContext")
 );
 
+if(process.env.SALTY_SOULS_CMS!){
+    console.log("VARIBALE DEFINED")
+}else{
+    console.log("VARIBALE NOT DEFINED")
+
+}
+
 const GRAPH_CMS_CLIENT = new GraphQLClient(process.env.SALTY_SOULS_CMS!);
 
 /**
