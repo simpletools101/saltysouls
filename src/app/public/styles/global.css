@@ -17,3 +17,7 @@ body {
     overflow-x: hidden;
 }
 
+body,html,xf-web-main {
+    height: 100%;
+    contain: strict;
+}

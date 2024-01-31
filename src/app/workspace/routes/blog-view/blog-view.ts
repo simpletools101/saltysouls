@@ -179,6 +179,7 @@ export class BlogView extends LitElement {
 
             .split-view .blog-view-container header h2 {
                 font-size: 30pt;
+                font-family:OpenSans;
                 height: fit-content;
             }
             .blog-view-container > .meta-data {
