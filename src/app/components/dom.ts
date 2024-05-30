@@ -1,8 +1,0 @@
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Simple Tools. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-export function showOpacityContainer(container:HTMLElement){
-    container.style.opacity = "1"
-}

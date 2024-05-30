@@ -17,6 +17,10 @@
 		"sourceMap" : true,
 		"module" : "es2020",
 		"target":"ES2020", 
+		"types": [
+			"./src/types/css.d.ts",
+			"./src/types/vite-env.d.ts"
+		],
 		"lib": [
 			"ES2016",
 			"ES2017.Object",
