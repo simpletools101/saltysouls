@@ -269,7 +269,7 @@ export class DefaultRoute extends LitElement {
                 <div class="wrapper">
                     <div class="banner-container">
                         <xf-patch-background
-                            .patchImageSource=${"https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"}
+                            .patchImageSource=${"https://images.pexels.com/photos/289998/pexels-photo-289998.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"}
                         >
                             ${when(this.bannerBlogCards.length > 0, () => {
                                 return html`
