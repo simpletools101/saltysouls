@@ -23,7 +23,7 @@ interface IRequestsModelCachedData {
     blogData: IBlogPost[];
     articleCards: IBlogPostCard[];
 }
-
+console.log("v-r",import.meta.env.VITE_SALTY_SOULS_CMS)
 export const IRequestsContext = createServiceContext<RequestsModel>(Symbol("requestContext"));
 
 const GRAPH_CMS_CLIENT = new GraphQLClient(import.meta.env.VITE_SALTY_SOULS_CMS!!);
