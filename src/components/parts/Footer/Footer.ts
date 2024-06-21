@@ -150,17 +150,8 @@ export class Footer extends LitElement {
                             <nav class="social-links-container">
                                 <a
                                     target="_blank"
-                                    aria-label="Check out SalySouls on facebook"
-                                    href="https://www.facebook.com/saltysouls"
-                                    ><iconify-icon
-                                        icon="ic:sharp-facebook"
-                                        class="icl-icon"
-                                    ></iconify-icon
-                                ></a>
-                                <a
-                                    target="_blank"
                                     aria-label="Check out SalySouls on instagram"
-                                    href="https://www.instagram.com/salty_souls"
+                                    href="https://www.instagram.com/patkimera/"
                                     ><iconify-icon
                                         class="icl-icon"
                                         icon="mdi:instagram"
