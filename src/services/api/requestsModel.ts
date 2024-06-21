@@ -271,7 +271,10 @@ export class RequestsModel {
         let blogItems: IBlogLikeItem[] = this.cachedRequestsData.blogData.filter((v) => {
             return v.slug != excludeSlug;
         });
-        return blogItems.slice(0, 3);
+        /**
+         * Set the number of blogs that appear on the side of currently viewed blog
+         */
+        return blogItems.slice(0, 2);
     }
 
     private getBlogArticles() {

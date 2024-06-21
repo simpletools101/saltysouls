@@ -5,10 +5,6 @@
 
 import { createContext as createServiceContext } from "@lit/context";
 
-
-import UserImage from "../../assets/imgs/user.png"
-
-
 /**
  * Load all the resources(Images) of the page
  */

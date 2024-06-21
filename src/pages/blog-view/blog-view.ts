@@ -14,6 +14,8 @@ import { formatDateOrTime } from "../../utils/dateTimeM";
 import { repeat } from "lit/directives/repeat.js";
 import { showOpacityContainer } from "../../components/dom";
 import { when } from "lit/directives/when.js";
+import { createContentError } from "../../components/ui/elements/contentError/contentError";
+import loadingGifImage from "../../public/assets/loaderimage.gif"
 import "../../components/ui/elements/blogLikeitem/blogLikeItem";
 import "../../components/ui/elements/notification/notification";
 
@@ -55,13 +57,13 @@ export class BlogView extends LitElement {
         createdAt: new Date().toUTCString(),
         id: "...",
         image: {
-            url: "blog-image-section",
+            url: loadingGifImage,
         },
         readtime: {
             text: "Loading...",
         },
         slug: "...patkimera",
-        title: "...",
+        title: "Growing and Living A better Life",
         description: "...",
     };
 
@@ -87,13 +89,32 @@ export class BlogView extends LitElement {
         showOpacityContainer(this);
     }
 
+    private async validateBlogDataAsync(data: IBlogContentItem): Promise<string> {
+        return new Promise((c, e) => {
+            /**
+             * The promise will complete on the first available error
+             */
+
+            //check image url presence
+            if (!(data.image.url.length > 0)) {
+                c("Error Fetching (ImageAsset)");
+            }
+        });
+    }
+
     /**
      * Initialize The Blog View and All its data
      */
 
     private intializeBlogView() {
         this.requestsContext.getContentDataForBlog(this.getLocationParams()).then((data) => {
-            this.blogContentData = data;
+            let receivedData = data;
+            this.validateBlogDataAsync(receivedData).then((v) => {
+                if (v.length > 0) {
+                    createContentError(v);
+                }
+            });
+            this.blogContentData = receivedData;
             document.body.scrollTo({ top: 0, left: 0, behavior: "smooth" });
             this.blogAsideViewItems = this.requestsContext.getContentDataAsideBlogs(this.getLocationParams());
         });
@@ -151,8 +172,8 @@ export class BlogView extends LitElement {
                 display: block;
                 transition: all 0.3s;
                 width: 100%;
-                height: auto;
-
+                max-height: 400px;
+                object-fit: cover;
                 margin-top: 30px;
             }
             .blog-view-container .main-content-area .blog-content-advert-section {
@@ -212,6 +233,8 @@ export class BlogView extends LitElement {
                 width: inherit;
                 padding-left: 20px;
                 height: 100% !important;
+                display: flex;
+                flex-direction: column;
             }
 
             .view-2 .like-items-title {
@@ -223,16 +246,12 @@ export class BlogView extends LitElement {
                 margin-top: 20px;
                 margin-bottom: 20px;
                 margin-right: 20px;
+                margin-left: 20px;
                 color: #fff;
                 background-color: #000;
                 text-transform: uppercase;
                 font-size: 15px;
                 padding: 8px;
-            }
-
-            .view-2 .comments-section {
-                width: 100%;
-                height: fit-content;
             }
 
             /**
@@ -246,20 +265,7 @@ export class BlogView extends LitElement {
                 }
             }
 
-            @media (max-width: 1087px) {
-                .split-view {
-                    display: block;
-                }
-                .view-2 .wrapper {
-                    padding-left: 0px;
-                }
-                .view-2 .wrapper .items-container {
-                    display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
-                }
-            }
-
-            @media (max-width: 1087px) {
+            @media (max-width: 1085px) {
                 .split-view {
                     display: block;
                 }
@@ -269,6 +275,12 @@ export class BlogView extends LitElement {
                 .view-2 .wrapper .items-container {
                     display: grid;
                     grid-template-columns: auto auto auto;
+                }
+            }
+
+            @media (max-width: 779px) {
+                .view-2 .wrapper .items-container {
+                    display: block;
                 }
             }
             @media (max-width: 713px) {
