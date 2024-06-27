@@ -30,7 +30,6 @@ export class BlogLikeItem extends LitElement {
             display: block;
             height: 250px;
             width: inherit;
-            border: 2px solid var(--turquoise);
             object-fit: cover;
         }
         .container a {
