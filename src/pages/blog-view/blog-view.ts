@@ -116,7 +116,7 @@ export class BlogView extends LitElement {
                 }
             });
             this.blogContentData = receivedData;
-            updatePageTitleFromBlog(receivedData.title)
+            updatePageTitleFromBlog(receivedData.title);
             document.body.scrollTo({ top: 0, left: 0, behavior: "smooth" });
             this.blogAsideViewItems = this.requestsContext.getContentDataAsideBlogs(this.getLocationParams());
         });
@@ -440,6 +440,9 @@ export class BlogView extends LitElement {
                                         data-ad-client="ca-pub-7690402186466228"
                                         data-ad-slot="4825207146"
                                     ></ins>
+                                    <script>
+                                        (adsbygoogle = window.adsbygoogle || []).push({});
+                                    </script>
                                 </div>
                             </div>
                         </div>
