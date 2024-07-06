@@ -392,17 +392,14 @@ export class BlogView extends LitElement {
                                         ${unsafeHTML(this.blogContentData.content.html)}
                                     </div>
                                     <div class="desktop-mobile-ads-container">
-                                        <amp-ad
-                                            width="100vw"
-                                            height="320"
-                                            type="adsense"
+                                        <ins
+                                            class="adsbygoogle"
+                                            style="display:block"
                                             data-ad-client="ca-pub-7690402186466228"
-                                            data-ad-slot="4825207146"
-                                            data-auto-format="mcrspv"
-                                            data-full-width=""
-                                        >
-                                            <div overflow=""></div>
-                                        </amp-ad>
+                                            data-ad-slot="8459763032"
+                                            data-ad-format="auto"
+                                            data-full-width-responsive="true"
+                                        ></ins>
                                     </div>
                                 </div>
                             </main>

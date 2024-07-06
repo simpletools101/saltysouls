@@ -48,7 +48,7 @@ export class BlogLikeItem extends LitElement {
     protected override render(): unknown {
         return html`
             <div class="container">
-                <img src=${this.imgSource} class="img-container" />
+                <img src=${this.imgSource} class="img-container" alt=${this.titleContent} />
                 <a href=${this.linkSource}>${this.titleContent}</a>
             </div>
         `;
