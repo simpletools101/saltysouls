@@ -122,6 +122,12 @@ export class Footer extends LitElement {
             text-align: center;
             margin-top: 8px;
         }
+
+        @media(max-width:733px) {
+            .up-ti-button {
+                right : 40px;
+            }
+        }
         @media (max-width) {
             .company-slogan .sl {
                 text-align: center;
