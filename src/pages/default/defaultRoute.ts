@@ -12,6 +12,7 @@ import { repeat } from "lit/directives/repeat.js";
 import { IBlogPostCard, IPostBanner } from "../../types/blogPost";
 import { showOpacityContainer } from "../../components/dom";
 import { when } from "lit/directives/when.js";
+import defaultPageImage from "../../public/assets/contentImages/defaultRouteImage.webp"
 import "./pch";
 
 @customElement("xf-route-default")
@@ -269,7 +270,7 @@ export class DefaultRoute extends LitElement {
                 <div class="wrapper">
                     <div class="banner-container">
                         <xf-patch-background
-                            .patchImageSource=${"https://images.pexels.com/photos/289998/pexels-photo-289998.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"}
+                            .patchImageSource=${defaultPageImage}
                         >
                             ${when(this.bannerBlogCards.length > 0, () => {
                                 return html`

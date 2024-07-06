@@ -149,7 +149,7 @@ export class BlogView extends LitElement {
                 height: 90px;
                 display: flex;
                 align-items: center;
-                margin-bottom: 10px;
+                margin-bottom: 20px;
                 margin-top: 20px;
                 transition: all 0.3s;
             }
@@ -421,30 +421,23 @@ export class BlogView extends LitElement {
                                 })}
 
                                 <div class="desktop-ads-container">
-                                    <amp-ad
-                                        width="100vw"
-                                        height="320"
-                                        type="adsense"
+                                    <ins
+                                        class="adsbygoogle"
+                                        style="display:block"
                                         data-ad-client="ca-pub-7690402186466228"
                                         data-ad-slot="8459763032"
-                                        data-auto-format="rspv"
-                                        data-full-width=""
-                                    >
-                                        <div overflow=""></div>
-                                    </amp-ad>
+                                        data-ad-format="auto"
+                                        data-full-width-responsive="true"
+                                    ></ins>
                                 </div>
                                 <div class="desktop-ads-container">
-                                    <amp-ad
-                                        width="100vw"
-                                        height="320"
-                                        type="adsense"
+                                    <ins
+                                        class="adsbygoogle"
+                                        style="display:block"
+                                        data-ad-format="autorelaxed"
                                         data-ad-client="ca-pub-7690402186466228"
                                         data-ad-slot="4825207146"
-                                        data-auto-format="mcrspv"
-                                        data-full-width=""
-                                    >
-                                        <div overflow=""></div>
-                                    </amp-ad>
+                                    ></ins>
                                 </div>
                             </div>
                         </div>

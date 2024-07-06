@@ -16,7 +16,7 @@ export class Footer extends LitElement {
         .container {
             width: inherit;
             height: inherit;
-            background-color: #000;
+            background-color: #010b0c;
             border: 1px solid transparent;
         }
 
@@ -65,6 +65,27 @@ export class Footer extends LitElement {
             text-decoration: none;
             color: #fff;
             margin: 8px 0px 8px 0px;
+        }
+
+        .up-ti-button {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            right: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000;
+            font-size: 25px;
+            background-color: #fff;
+            border: 1.5px solid #fff;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .up-ti-button:hover {
+            color: #fff;
+            background-color: unset;
         }
 
         .part-2 a {
@@ -128,6 +149,10 @@ export class Footer extends LitElement {
         }
     `;
 
+    private movePageUp() {
+        document.body.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    }
+
     override render() {
         return html`
             <div class="container">
@@ -135,14 +160,15 @@ export class Footer extends LitElement {
                     <div class="part-1">
                         <div class="company-slogan">
                             <xf-product-link></xf-product-link>
-                            <div class="sl">
-                                Faithfull Living in a Modern World
-                            </div>
+                            <div class="sl">Faithfull Living in a Modern World</div>
                         </div>
                         <div class="links-section">
                             <a href="/aboutus">ABOUT US</a>
                             <a href="/articles">ARTICLES</a>
                             <a href="/privacy-policy">PRIVACY POLICY</a>
+                            <xf-make-button title="Goto the Top" @xf-key-tap=${this.movePageUp} class="up-ti-button">
+                                <iconify-icon icon="material-symbols:arrow-upward-alt"></iconify-icon>
+                            </xf-make-button>
                         </div>
                     </div>
                     <div class="part-2">
@@ -152,15 +178,16 @@ export class Footer extends LitElement {
                                     target="_blank"
                                     aria-label="Check out Patkimera on instagram"
                                     href="https://www.instagram.com/patkimera/"
-                                    ><iconify-icon
-                                        class="icl-icon"
-                                        icon="mdi:instagram"
-                                    ></iconify-icon
-                                ></a>
+                                    ><iconify-icon icon="skill-icons:instagram"></iconify-icon>
+                                </a>
+                                <a
+                                    target="_blank"
+                                    aria-label="Check out Patkimera on Pinterest"
+                                    href="https://www.pinterest.com/naks0529/"
+                                    ><iconify-icon icon="logos:pinterest"></iconify-icon>
+                                </a>
                             </nav>
-                            <div class="copyright-statment">
-                                &copy; Copyright Patkimera. All rights reserved
-                            </div>
+                            <div class="copyright-statment">&copy; Copyright Patkimera. All rights reserved</div>
                         </div>
                     </div>
                 </div>

@@ -11,6 +11,7 @@ import { IResourcesContext, IResources } from "../../services/api/resourcesConte
 import { IRequestsContext, RequestsModel } from "../../services/api/requestsModel";
 import { IBlogPostCard } from "../../types/blogPost";
 import { when } from "lit/directives/when.js";
+import articlesPageImage from "../../public/assets/contentImages/articlespage.webp"
 
 @customElement("xf-route-articles")
 export class ArticlesRoute extends LitElement {
@@ -141,7 +142,7 @@ export class ArticlesRoute extends LitElement {
             <div class="container">
                 <div class="view-1">
                     <xf-route-banner
-                        .imgSrc=${"https://images.pexels.com/photos/904616/pexels-photo-904616.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"}
+                        .imgSrc=${articlesPageImage}
                         .routeTitle=${"Articles"}
                         .routeStatement=${"Bringing forth the truth and helping you improve your day to day life"}
                     ></xf-route-banner>

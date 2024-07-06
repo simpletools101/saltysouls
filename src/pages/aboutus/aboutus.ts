@@ -9,6 +9,7 @@ import { map } from "lit/directives/map.js";
 import { consume } from "@lit/context";
 import { IResourcesContext, IResources } from "../../services/api/resourcesContext";
 import aboutusData from "./lib/about_part.json";
+import aboutusPageImage from "../../public/assets/contentImages/aboutus.jpeg"
 import "./pch";
 
 interface IContentType {
@@ -88,7 +89,7 @@ export class AboutusRoute extends LitElement {
             <div class="container">
                 <div class="view-1">
                     <xf-route-banner
-                        .imgSrc=${"https://images.pexels.com/photos/1000445/pexels-photo-1000445.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"}
+                        .imgSrc=${aboutusPageImage}
                         .routeTitle=${"About us"}
                         .routeStatement=${"Why are we Here?"}
                     ></xf-route-banner>
