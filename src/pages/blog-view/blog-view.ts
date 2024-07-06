@@ -18,6 +18,7 @@ import { createContentError } from "../../components/ui/elements/contentError/co
 import loadingGifImage from "../../public/assets/loaderimage.gif";
 import "../../components/ui/elements/blogLikeitem/blogLikeItem";
 import "../../components/ui/elements/notification/notification";
+import { updatePageTitleFromBlog } from "../../services/api/updateTitle";
 
 /**
  * The View is Viewing A blog and all its content
@@ -115,6 +116,7 @@ export class BlogView extends LitElement {
                 }
             });
             this.blogContentData = receivedData;
+            updatePageTitleFromBlog(receivedData.title)
             document.body.scrollTo({ top: 0, left: 0, behavior: "smooth" });
             this.blogAsideViewItems = this.requestsContext.getContentDataAsideBlogs(this.getLocationParams());
         });

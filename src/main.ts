@@ -16,6 +16,7 @@ import "./components/ui/elements/announceItem/announceItem";
 import "./styles/global.css";
 import "./styles/theme.css";
 import "iconify-icon";
+import { updatePageTitleFromBlog } from "./services/api/updateTitle";
 
 @customElement("xf-web-main")
 export class WebMain extends LitElement {
@@ -94,6 +95,19 @@ export class WebMain extends LitElement {
     private listenForParamAndOptionsChange() {
         XFRouterModel.onDidNavigate.subscribeAsync((args) => {
             this.currentRoute = args.pathname! as TRoutes;
+            switch(this.currentRoute){
+                case "/":
+                    updatePageTitleFromBlog("Patkimera - Grow and Change Your Life daily")
+                    break;
+                case "/aboutus":
+                    updatePageTitleFromBlog("Patkimera - About us")
+                    break;
+                case "/articles":
+                    updatePageTitleFromBlog("Patkimera - Articles")
+                    break;
+                case  "/privacy-policy":
+                    updatePageTitleFromBlog("Privacy Policy")
+            }
             document.body.scrollTo({ top: 0, left: 0, behavior: "smooth" });
         });
     }
