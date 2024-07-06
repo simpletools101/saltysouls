@@ -15,7 +15,7 @@ import { repeat } from "lit/directives/repeat.js";
 import { showOpacityContainer } from "../../components/dom";
 import { when } from "lit/directives/when.js";
 import { createContentError } from "../../components/ui/elements/contentError/contentError";
-import loadingGifImage from "../../public/assets/loaderimage.gif"
+import loadingGifImage from "../../public/assets/loaderimage.gif";
 import "../../components/ui/elements/blogLikeitem/blogLikeItem";
 import "../../components/ui/elements/notification/notification";
 
@@ -254,6 +254,18 @@ export class BlogView extends LitElement {
                 padding: 8px;
             }
 
+            .desktop-ads-container {
+                display: block;
+                width: 100%;
+                height: 400px;
+                margin: 25px 0px 25px 0px;
+            }
+            .desktop-mobile-ads-container {
+                margin-top: 20px;
+                width: 100%;
+                height: 250px;
+            }
+
             /**
                 media Queries
              */
@@ -276,11 +288,17 @@ export class BlogView extends LitElement {
                     display: grid;
                     grid-template-columns: auto auto auto;
                 }
+                .view-2 .wrapper .items-container .desktop-ads-container {
+                    display: none;
+                }
             }
 
             @media (max-width: 779px) {
                 .view-2 .wrapper .items-container {
                     display: block;
+                }
+                .view-2 .wrapper .items-container .desktop-ads-container {
+                    display: none;
                 }
             }
             @media (max-width: 713px) {
@@ -371,6 +389,19 @@ export class BlogView extends LitElement {
                                     <div class="rendered-html-content">
                                         ${unsafeHTML(this.blogContentData.content.html)}
                                     </div>
+                                    <div class="desktop-mobile-ads-container">
+                                        <amp-ad
+                                            width="100vw"
+                                            height="320"
+                                            type="adsense"
+                                            data-ad-client="ca-pub-7690402186466228"
+                                            data-ad-slot="4825207146"
+                                            data-auto-format="mcrspv"
+                                            data-full-width=""
+                                        >
+                                            <div overflow=""></div>
+                                        </amp-ad>
+                                    </div>
                                 </div>
                             </main>
                         </div>
@@ -388,6 +419,33 @@ export class BlogView extends LitElement {
                                         ></xf-blog-like-item>
                                     `;
                                 })}
+
+                                <div class="desktop-ads-container">
+                                    <amp-ad
+                                        width="100vw"
+                                        height="320"
+                                        type="adsense"
+                                        data-ad-client="ca-pub-7690402186466228"
+                                        data-ad-slot="8459763032"
+                                        data-auto-format="rspv"
+                                        data-full-width=""
+                                    >
+                                        <div overflow=""></div>
+                                    </amp-ad>
+                                </div>
+                                <div class="desktop-ads-container">
+                                    <amp-ad
+                                        width="100vw"
+                                        height="320"
+                                        type="adsense"
+                                        data-ad-client="ca-pub-7690402186466228"
+                                        data-ad-slot="4825207146"
+                                        data-auto-format="mcrspv"
+                                        data-full-width=""
+                                    >
+                                        <div overflow=""></div>
+                                    </amp-ad>
+                                </div>
                             </div>
                         </div>
                     </div>
