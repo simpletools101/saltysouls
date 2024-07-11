@@ -112,7 +112,7 @@ export class RequestsModel {
     private requestBlogsData(): Promise<{ blogs: IBlogPost[] }> {
         const __query__ = gql`
             {
-                blogs {
+                blogs(orderBy:createdAt_DESC,first:30000000) {
                     createdAt
                     id
                     slug
@@ -151,7 +151,7 @@ export class RequestsModel {
     private async filterAndCacheData(blogData: IBlogPost[]) {
         return new Promise<void>((c) => {
             //cache the main blogData itself first
-            this.cachedRequestsData.blogData = blogData.reverse();
+            this.cachedRequestsData.blogData = blogData
 
             //use the data to fill other values;
 
