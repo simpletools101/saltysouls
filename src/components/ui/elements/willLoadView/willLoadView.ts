@@ -51,6 +51,8 @@ export class WillLoadView extends LitElement {
     override updated() {
         if (!this.isVisible) {
             this.style.display = "none";
+        }else{
+            this.style.display = "block"
         }
     }
     private dispatchLoadSequenceEvent() {

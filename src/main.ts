@@ -3,7 +3,7 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { LitElement, css, html } from "lit";
+import {  css, html } from "lit";
 import { customElement, state } from "lit/decorators.js";
 import { XFRouterModel } from "./utils/xf-router";
 import { routes } from "./webRoutes";
@@ -17,9 +17,10 @@ import "./styles/global.css";
 import "./styles/theme.css";
 import "iconify-icon";
 import { updatePageTitleFromBlog } from "./services/api/updateTitle";
+import { OpenLit } from "./components/ui/base/OpenLit/OpenLit";
 
 @customElement("xf-web-main")
-export class WebMain extends LitElement {
+export class WebMain extends OpenLit{
     /**
      * Common State for Most Components ------
      */
@@ -148,7 +149,7 @@ export class WebMain extends LitElement {
     }
 
     public routerOutletContainer() {
-        return this.shadowRoot?.querySelector("#outlet")! as HTMLDivElement;
+        return this.querySelector("#outlet")! as HTMLDivElement;
     }
 
     protected override render(): unknown {
