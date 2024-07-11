@@ -3,7 +3,7 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
- xf-blog-view {
+xf-blog-view {
     display: block;
     height: fit-content;
 
@@ -153,82 +153,82 @@
  */
 
 @media (max-width: 1295px) {
-    .split-view .blog-view-container header h2 {
+    .marginal-seat-blog-view .split-view .blog-view-container header h2 {
         font-size: 25pt;
         height: fit-content;
     }
 }
 
 @media (max-width: 1085px) {
-    .split-view {
+    .marginal-seat-blog-view .split-view {
         display: block;
     }
-    .view-2 .wrapper {
+    .marginal-seat-blog-view .view-2 .wrapper {
         padding-left: 0px;
     }
-    .view-2 .wrapper .items-container {
+    .marginal-seat-blog-view .view-2 .wrapper .items-container {
         display: grid;
         grid-template-columns: auto auto auto;
     }
-    .view-2 .wrapper .items-container .desktop-ads-container {
+    .marginal-seat-blog-view .view-2 .wrapper .items-container .desktop-ads-container {
         display: none;
     }
 }
 
 @media (max-width: 779px) {
-    .view-2 .wrapper .items-container {
+    .marginal-seat-blog-view .view-2 .wrapper .items-container {
         display: block;
     }
-    .view-2 .wrapper .items-container .desktop-ads-container {
+    .marginal-seat-blog-view .view-2 .wrapper .items-container .desktop-ads-container {
         display: none;
     }
 }
 @media (max-width: 713px) {
-    .split-view .blog-view-container header h2 {
+    .marginal-seat-blog-view .split-view .blog-view-container header h2 {
         font-size: 22pt;
         height: fit-content;
     }
 }
 
 @media (max-width: 623px) {
-    .split-view .blog-view-container header h2 {
+    .marginal-seat-blog-view .split-view .blog-view-container header h2 {
         font-size: 20pt;
         height: fit-content;
     }
 }
 
 @media (max-width: 569px) {
-    .split-view .blog-view-container header h2 {
+    .marginal-seat-blog-view .split-view .blog-view-container header h2 {
         font-size: 20pt;
         height: fit-content;
     }
-    .blog-view-container img.blog-item-image {
+    .marginal-seat-blog-view .blog-view-container img.blog-item-image {
         margin-top: 20px;
     }
-    .blog-view-container > .meta-data {
+    .marginal-seat-blog-view .blog-view-container > .meta-data {
         font-size: 16px;
     }
 }
 
 @media (max-width: 569px) {
-    .split-view .blog-view-container header {
+    .marginal-seat-blog-view .split-view .blog-view-container header {
         margin-top: 25px;
         margin-bottom: 20px;
     }
 }
 
 @media (max-width: 477px) {
-    .split-view .blog-view-container header h2 {
+    .marginal-seat-blog-view .split-view .blog-view-container header h2 {
         font-size: 19pt;
     }
 
-    .blog-view-container > .meta-data {
+    .marginal-seat-blog-view .blog-view-container > .meta-data {
         font-size: 15px;
     }
 }
 
 @media (max-width: 385px) {
-    .blog-view-container img.blog-item-image {
+    .marginal-seat-blog-view .blog-view-container img.blog-item-image {
         width: 310px;
     }
 }
