@@ -104,13 +104,8 @@ export class ArticlesRoute extends LitElement {
      * and then keep adding five , five elements until the last index of the host array is reached
      */
     private createInitialDataLoadForElements(blogCardsData: IBlogPostCard[]) {
-        if (blogCardsData.length <= 10) {
-            this.consumerBlogCardArray.push(...blogCardsData);
-        } else {
-            this.isCopyingEnabled = true;
-            this.consumerBlogCardArray.push(...blogCardsData.slice(this.startIndex, this.startIndex + 10));
-            this.startIndex += 10;
-        }
+        this.consumerBlogCardArray.push(...blogCardsData);
+
     }
     /**
      * Check if the copying can continue ie more cards are still in the host array and we can still copy more to

@@ -125,15 +125,8 @@ export class DefaultRoute extends LitElement {
      * and then keep adding five , five elements until the last index of the host array is reached
      */
     private createInitialDataLoadForElements(blogCardsData: IBlogPostCard[]) {
-        if (blogCardsData.length <= 10) {
-            this.consumerBlogCardArray.push(...blogCardsData);
-        } else {
-            this.isCopyingEnabled = true;
-            this.consumerBlogCardArray.push(
-                ...blogCardsData.slice(this.startIndex, this.startIndex + 10)
-            );
-            this.startIndex += 10;
-        }
+        this.consumerBlogCardArray.push(...blogCardsData);
+      
     }
 
     /**
