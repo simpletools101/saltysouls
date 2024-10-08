@@ -20,7 +20,7 @@ export class CommonQuote extends LitElement {
 
             .welcome-item-container {
                 width: 100%;
-                height: 450px;
+                height: 470px;
                 background-color: #ffffff;
                 opacity: 1;
                 background: repeating-linear-gradient(-45deg, #4bcbb5, #4bcbb5 5px, #ffffff 5px, #ffffff 25px);
@@ -102,7 +102,7 @@ export class CommonQuote extends LitElement {
         return html`
             <div class="welcome-item-container">
                 <div class="statement">
-                    Faithfull <span class="cl-span">Living</span> in a <span class="cl-span">Modern</span> World
+                  <span class="cl-span">Hey!</span> <span class="cl-span">Hey!</span><span class="cl-span">Welcome</span>
                 </div>
                 <a href="/aboutus" aria-label="Learn More About Us" class="welcome-item-btn">Learn More</a>
             </div>

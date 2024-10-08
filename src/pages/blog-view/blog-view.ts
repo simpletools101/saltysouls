@@ -55,7 +55,7 @@ export class BlogView extends OpenLit {
     @property({ attribute: false }) blogContentData: IBlogContentItem = {
         comments: [],
         content: {
-            html: "<p>Loading...</>",
+            html: "",
         },
         createdAt: new Date().toUTCString(),
         id: "...",
@@ -63,10 +63,10 @@ export class BlogView extends OpenLit {
             url: loadingGifImage,
         },
         readtime: {
-            text: "Loading...",
+            text: "",
         },
-        slug: "...patkimera",
-        title: "Growing and Living A better Life",
+        slug: "",
+        title: "",
         description: "...",
     };
 

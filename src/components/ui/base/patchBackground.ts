@@ -32,7 +32,7 @@ export class XFPatchBackground extends LitElement {
                 display: block;
                 height: inherit;
                 width: inherit;
-                background-color:#000000b3;
+                background-color:#0000003b;
             }
             .container > .main-content-view {
                 position: absolute;

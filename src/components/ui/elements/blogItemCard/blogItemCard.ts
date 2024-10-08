@@ -72,7 +72,7 @@ export class BlogItemCard extends LitElement {
             }
 
             .blog-initial-article .entry-content .entry-content-img:hover {
-                filter: grayscale(1);
+                filter: grayscale(0);
             }
             .blog-initial-article .entry-content p {
                 margin-top: 25px;
